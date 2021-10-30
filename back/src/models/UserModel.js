@@ -19,4 +19,4 @@ User.associate = function(models){
     User.hasMany(models.Comentario);
 };
 
-model.exports = User;
+module.exports = User;

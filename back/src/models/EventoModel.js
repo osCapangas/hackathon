@@ -31,4 +31,4 @@ Evento.associate = function(models){
 
 };
 
-model.exports = Evento;
+module.exports = Evento;

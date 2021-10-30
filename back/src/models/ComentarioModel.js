@@ -1,7 +1,7 @@
 const DataTypes = require("sequelize")
 const sequelize = require("../config/sequelize")
 
-const Comentario = sequelize.define({
+const Comentario = sequelize.define('Comentario', {
     usuario_id:{
         type:DataTypes.STRING,
         allowNull: false
@@ -26,4 +26,4 @@ Comentario.associate = function(models){
 
 };
 
-model.exports = Comentario;
+module.exports = Comentario;
