@@ -16,6 +16,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(routes);
 
+app.get('/', (req, res) => {
+  res.send('<h1>Olá Mundo</h1>')
+});
+
 app.listen(port, () => {
   console.log(`${process.env.APP_NAME} app listening at http://localhost:${port}`);
 });

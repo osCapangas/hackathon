@@ -1,3 +1,9 @@
-/node_modules
+node_modules/
+.DS_Store
+*.sqlite
+*.png
+*.jpg
 .env
-.sqlite
+.idea
+id_rsa_priv.pem
+    

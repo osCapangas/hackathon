@@ -1,5 +1,6 @@
 const { Router } = require('express');
 
+const passport = require("passport");
 const UserController = require('../controllers/UserController');
 const EventoController = require('../controllers/EventoController');
 const ComentarioController = require('../controllers/ComentarioController');
@@ -25,3 +26,5 @@ router.get('/comentario/:id', ComentarioController.show);
 router.delete('/comentario/:id', ComentarioController.destroy);
 router.post('/comentario', ComentarioController.create);
 router.put('/comentario/:id',ComentarioController.update);
+
+module.exports = router;
