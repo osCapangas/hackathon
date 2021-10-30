@@ -1,5 +1,5 @@
 const DataTypes = require("sequelize");
-const sequelize = require();
+const sequelize = require("../config/sequelize");
 
 const User = sequelize.define('User', {
     DRE: {
@@ -15,7 +15,8 @@ const User = sequelize.define('User', {
 });
 
 User.associate = function(models){
-
+    User.hasMany(models.Evento);
+    User.hasMany(models.Comentario);
 };
 
 model.exports = User;

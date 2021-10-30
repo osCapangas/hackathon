@@ -1,5 +1,5 @@
 const DataTypes = require("sequelize");
-const sequelize = require();
+const sequelize = require("../config/sequelize");
 
 const Evento = sequelize.define('Evento', {
         conteudo:{
@@ -26,6 +26,8 @@ const Evento = sequelize.define('Evento', {
 });
 
 Evento.associate = function(models){
+    Evento.belongsTo(models.User);
+    Evento.hasMany(models.Comentario);
 
 };
 
