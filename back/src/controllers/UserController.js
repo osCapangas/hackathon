@@ -10,7 +10,7 @@ const create = async(req,res) => {
 		const hash = hashAndSalt.hash;
 		const newUserData = {
 			name: req.body.name,
-            dre: req.body.name,
+            DRE: req.body.dre,
 			hash: hash,
 			salt: salt
 		}
@@ -48,10 +48,9 @@ const update = async(req,res) => {
         if(updated) {
             const user = await User.findByPk(id);
             return res.status(200).send(user);
-        } 
-        throw new Error();
-    }catch(err){
-        return res.status(500).json("Usuário não encontrado");
+        }
+    }catch(e){
+        return res.status(500).json(e + "!");
     }
 };
 
