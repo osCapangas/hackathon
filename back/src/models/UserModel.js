@@ -15,6 +15,7 @@ const User = sequelize.define('User', {
 });
 
 User.associate = function(models){
+    User.hasOne(models.Cargo);
     User.hasMany(models.Evento);
     User.hasMany(models.Comentario);
 };
