@@ -29,7 +29,7 @@ export default function RegisterScreen({ navigation }) {
     }
     navigation.reset({
       index: 0,
-      routes: [{ name: 'Dashboard' }],
+      routes: [{ name: 'LoginScreen' }],
     })
   }
 
@@ -54,9 +54,7 @@ export default function RegisterScreen({ navigation }) {
         error={!!dre.error}
         errorText={dre.error}
         autoCapitalize="none"
-        autoCompleteType="dre"
-        textContentType="dreAddress"
-        keyboardType="dre-address"
+        keyboardType="numeric"
       />
       <TextInput
         label="Senha"
