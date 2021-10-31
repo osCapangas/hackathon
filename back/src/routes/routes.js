@@ -7,11 +7,22 @@ const ComentarioController = require('../controllers/ComentarioController');
 const CargoController = require('../controllers/CargoController');
 
 
+const AuthController = require("../controllers/AuthController");
+
+
+
 const mesmoUserMiddleware = require("../middlewares/mesmoUser");
 
 const router = Router();
 
 const path = require('path');
+
+
+router.use("/private", passport.authenticate('jwt', {session: false}));
+router.get('/private/getDetails', AuthController.getDetails);
+router.post('/login', AuthController.login);
+router.post('/logout', AuthController.logout);
+
 
 router.get('/users', UserController.index);
 router.get('/users/:id', UserController.show);
