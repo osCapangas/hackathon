@@ -14,10 +14,6 @@ const Evento = sequelize.define('Evento', {
             type:DataTypes.DATE,
             allowNull: false
         },
-        conteudo:{
-            type:DataTypes.STRING,
-            allowNull:false
-        },
         usuario_id:{
             type:DataTypes.STRING,
             allowNull:false

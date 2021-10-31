@@ -8,4 +8,3 @@ const sequelize = require('../config/sequelize');
   }
   catch (error) { console.log(error) };
 })();
-    
