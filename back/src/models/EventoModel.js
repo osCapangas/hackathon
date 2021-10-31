@@ -13,10 +13,6 @@ const Evento = sequelize.define('Evento', {
         data:{
             type:DataTypes.DATE,
             allowNull: false
-        },
-        usuario_id:{
-            type:DataTypes.STRING,
-            allowNull:false
         }
 
 });
