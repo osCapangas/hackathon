@@ -4,6 +4,7 @@ const passport = require("passport");
 const UserController = require('../controllers/UserController');
 const EventoController = require('../controllers/EventoController');
 const ComentarioController = require('../controllers/ComentarioController');
+const CargoController = require('../controllers/CargoController');
 
 const router = Router();
 
@@ -26,5 +27,11 @@ router.get('/comentario/:id', ComentarioController.show);
 router.delete('/comentario/:id', ComentarioController.destroy);
 router.post('/comentario', ComentarioController.create);
 router.put('/comentario/:id',ComentarioController.update);
+
+router.get('/cargo', CargoController.index);
+router.get('/cargo/:id', CargoController.show);
+router.delete('/cargo/:id', CargoController.destroy);
+router.post('/cargo', CargoController.create);
+router.put('/cargo/:id',CargoController.update);
 
 module.exports = router;

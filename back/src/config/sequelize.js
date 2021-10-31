@@ -22,6 +22,7 @@ module.exports = sequelize;
 require('../models/EventoModel');
 require('../models/UserModel');
 require('../models/ComentarioModel');
+require('../models/CargoModel');
 
 
 for (mod in sequelize.models) {
