@@ -6,6 +6,9 @@ const EventoController = require('../controllers/EventoController');
 const ComentarioController = require('../controllers/ComentarioController');
 const CargoController = require('../controllers/CargoController');
 
+
+const mesmoUserMiddleware = require("../middlewares/mesmoUser");
+
 const router = Router();
 
 const path = require('path');
@@ -18,9 +21,9 @@ router.put('/users/:id',UserController.update);
 
 router.get('/evento', EventoController.index);
 router.get('/evento/:id', EventoController.show);
-router.delete('/evento/:id', EventoController.destroy);
+router.delete('/evento/:id', mesmoUserMiddleware, EventoController.destroy);
 router.post('/evento', EventoController.create);
-router.put('/evento/:id',EventoController.update);
+router.put('/evento/:id',mesmoUserMiddleware, EventoController.update);
 
 router.get('/comentario', ComentarioController.index);
 router.get('/comentario/:id', ComentarioController.show);
@@ -30,8 +33,8 @@ router.put('/comentario/:id',ComentarioController.update);
 
 router.get('/cargo', CargoController.index);
 router.get('/cargo/:id', CargoController.show);
-router.delete('/cargo/:id', CargoController.destroy);
+router.delete('/cargo/:id',mesmoUserMiddleware, CargoController.destroy);
 router.post('/cargo', CargoController.create);
-router.put('/cargo/:id',CargoController.update);
+router.put('/cargo/:id',mesmoUserMiddleware, CargoController.update);
 
 module.exports = router;
