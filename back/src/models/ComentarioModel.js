@@ -2,14 +2,6 @@ const DataTypes = require("sequelize")
 const sequelize = require("../config/sequelize")
 
 const Comentario = sequelize.define('Comentario', {
-    usuario_id:{
-        type:DataTypes.STRING,
-        allowNull: false
-    },
-    evento_id:{
-        type:DataTypes.STRING,
-        allowNull:false
-    },
     titulo:{
         type:DataTypes.STRING,
         allowNull:false
