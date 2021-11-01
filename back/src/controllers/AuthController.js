@@ -5,10 +5,11 @@ const app = express()
 
 const login = async(req, res)=>{
 	try {
-		const user = await User.findOne({where: {email: req.body.email}});
+		const user = await User.findOne({where: {DRE: req.body.dre}});
 		if(!user)
 			return res.status(404).json({message: "Usuario não encontrado."});
 		const {password} = req.body;
+		//
 		if(Auth.checkPassword(password, user.hash, user.salt)){
 			const token = Auth.generateJWT(user);
 			return res.status(200).json({token: token});

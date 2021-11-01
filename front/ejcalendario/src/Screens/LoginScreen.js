@@ -10,6 +10,7 @@ import BackButton from '../components/BackButton'
 import { theme } from '../core/theme'
 import { dreValidator } from '../helpers/dreValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
+import api from '../services/api'
 
 export default function LoginScreen({ navigation }) {
   const [dre, setDre] = useState({ value: '', error: '' })
@@ -22,6 +23,20 @@ export default function LoginScreen({ navigation }) {
       setDre({ ...dre, error: dreError })
       setPassword({ ...password, error: passwordError })
       return
+    }
+    else {
+      const params = {
+        'dre': dre.value,
+        'password': password.value
+      }
+
+      api.post('/login', params)
+        .then(function (response) {
+          console.log(response.data);
+        })
+        .catch(function (error) {
+          console.log(error.data);
+        });
     }
     navigation.reset({
       index: 0,

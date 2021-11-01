@@ -11,6 +11,8 @@ import { theme } from '../core/theme'
 import { dreValidator } from '../helpers/dreValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
 import { nameValidator } from '../helpers/nameValidator'
+import api from '../services/api'
+
 
 export default function RegisterScreen({ navigation }) {
   const [name, setName] = useState({ value: '', error: '' })
@@ -27,10 +29,29 @@ export default function RegisterScreen({ navigation }) {
       setPassword({ ...password, error: passwordError })
       return
     }
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'LoginScreen' }],
-    })
+
+    else {
+
+
+      const params = {
+        'name': name.value,
+        'dre': dre.value,
+        'password': password.value
+      }
+
+      api.post('/users', params)
+        .then(function (response) {
+          console.log(response.data);
+        })
+        .catch(function (error) {
+          console.log(error.data);
+        });
+
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'LoginScreen' }],
+      })
+    }
   }
 
   return (

@@ -5,12 +5,12 @@ require('./config/sequelize');
 const passport = require('passport');
 const app = express();
 const port = process.env.PORT;
-//const cors = require('cors');
+const cors = require('cors');
 const routes = require('./routes/routes');
 const path = require('path');
 
 require('./middlewares/jwtPassport')(passport);
-
+app.use(cors())
 app.use(passport.initialize());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
