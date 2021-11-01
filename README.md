@@ -7,4 +7,4 @@ Um calendário colaborativo para que os alunos da UFRJ possam se ajudar postando
 
 ![](https://i.imgur.com/WMdi5vK.png)
 
-[Protótipo](https://www.figma.com/file/IsIFKOzxkfGRObeY4RtbCt/calend%C3%A1rio?node-id=0%3A1)
+## [Protótipo](https://www.figma.com/file/IsIFKOzxkfGRObeY4RtbCt/calend%C3%A1rio?node-id=0%3A1)
