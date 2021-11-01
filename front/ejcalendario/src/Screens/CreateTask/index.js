@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     width: 327,
     alignSelf: 'center',
     borderRadius: 20,
-    shadowColor: '#2E66E7',
+    shadowColor: '#1BACA4',
     backgroundColor: '#ffffff',
     shadowOffset: {
       width: 3,
@@ -140,7 +140,7 @@ export default function CreateTask({ navigation, route }) {
       'DD'
     )}`]: {
       selected: true,
-      selectedColor: '#2E66E7'
+      selectedColor: '#1BACA4'
     }
   });
   const [currentDay, setCurrentDay] = useState(moment().format());
@@ -227,8 +227,8 @@ export default function CreateTask({ navigation, route }) {
         dots: [
           {
             key: uuidv4(),
-            color: '#2E66E7',
-            selectedDotColor: '#2E66E7'
+            color: '#1BACA4',
+            selectedDotColor: '#1BACA4'
           }
         ]
       }
@@ -305,7 +305,7 @@ export default function CreateTask({ navigation, route }) {
                   setSelectedDay({
                     [day.dateString]: {
                       selected: true,
-                      selectedColor: '#2E66E7'
+                      selectedColor: '#1BACA4'
                     }
                   });
                   setCurrentDay(day.dateString);
@@ -315,9 +315,9 @@ export default function CreateTask({ navigation, route }) {
                 hideArrows
                 markingType="custom"
                 theme={{
-                  selectedDayBackgroundColor: '#2E66E7',
+                  selectedDayBackgroundColor: '#1BACA4',
                   selectedDayTextColor: '#ffffff',
-                  todayTextColor: '#2E66E7',
+                  todayTextColor: '#1BACA4',
                   backgroundColor: '#eaeef7',
                   calendarBackground: '#eaeef7',
                   textDisabledColor: '#d9dbe0'
@@ -433,7 +433,7 @@ export default function CreateTask({ navigation, route }) {
                 styles.createTaskButton,
                 {
                   backgroundColor:
-                    taskText === '' ? 'rgba(46, 102, 231,0.5)' : '#2E66E7'
+                    taskText === '' ? 'rgba(46, 102, 231,0.5)' : '#1BACA4'
                 }
               ]}
               onPress={async () => {

@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     width: 327,
     alignSelf: 'center',
     borderRadius: 10,
-    shadowColor: '#2E66E7',
+    shadowColor: '#1BACA4',
     backgroundColor: '#ffffff',
     marginTop: 10,
     marginBottom: 10,
@@ -50,11 +50,11 @@ const styles = StyleSheet.create({
     right: 17,
     height: 60,
     width: 60,
-    backgroundColor: '#2E66E7',
+    backgroundColor: '#1BACA4',
     borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center',
-    shadowColor: '#2E66E7',
+    shadowColor: '#1BACA4',
     shadowOffset: {
       width: 0,
       height: 5
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   updateButton: {
-    backgroundColor: '#2E66E7',
+    backgroundColor: '#1BACA4',
     width: 100,
     height: 38,
     alignSelf: 'center',
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     width: 327,
     alignSelf: 'center',
     borderRadius: 20,
-    shadowColor: '#2E66E7',
+    shadowColor: '#1BACA4',
     backgroundColor: '#ffffff',
     shadowOffset: {
       width: 3,
@@ -562,7 +562,7 @@ export default function Home({ navigation }) {
           dateNameStyle={{ color: '#BBBBBB' }}
           highlightDateNumberStyle={{
             color: '#fff',
-            backgroundColor: '#2E66E7',
+            backgroundColor: '#1BACA4',
             marginTop: 10,
             height: 35,
             width: 35,
@@ -574,7 +574,7 @@ export default function Home({ navigation }) {
             justifyContent: 'center',
             alignItems: 'center'
           }}
-          highlightDateNameStyle={{ color: '#2E66E7' }}
+          highlightDateNameStyle={{ color: '#1BACA4' }}
           disabledDateNameStyle={{ color: 'grey' }}
           disabledDateNumberStyle={{ color: 'grey', paddingTop: 10 }}
           datesWhitelist={datesWhitelist}
