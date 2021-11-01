@@ -4,7 +4,7 @@ const Auth = require("../config/auth");
 
 const create = async(req,res) => {
 	try {
-        console.log('1')
+
 		const { password } = req.body;
 		const hashAndSalt = Auth.generatePassword(password);
 		const salt = hashAndSalt.salt;
@@ -15,9 +15,9 @@ const create = async(req,res) => {
 			hash: hash,
 			salt: salt
 		}
-        console.log('2')
+
 		const user = await User.create(newUserData);
-        console.log('3')
+
 
 		return res.status(201).json({user: user});
 	} catch (e) {
