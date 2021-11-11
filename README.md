@@ -8,3 +8,5 @@ Um calendário colaborativo para que os alunos da UFRJ possam se ajudar postando
 ![](https://i.imgur.com/WMdi5vK.png)
 
 ## [Protótipo](https://www.figma.com/file/IsIFKOzxkfGRObeY4RtbCt/calend%C3%A1rio?node-id=0%3A1)
+
+## [Pitch](https://www.canva.com/design/DAEusv4IkFM/ZA_m0S5AFPrXIaW7dZ-cJg/view?utm_content=DAEusv4IkFM&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
